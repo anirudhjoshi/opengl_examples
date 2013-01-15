@@ -1,22 +1,30 @@
 #include "GL/freeglut.h"
 #include "GL/gl.h"
-
-void render();
+#include "first.h"
 
 void render() {
-
     glClearColor(0,0,0,0);
     glClear(GL_COLOR_BUFFER_BIT);
 
     glColor3f(1, 1, 1);
 
-    glBegin(GL_POLYGON);
-        glVertex2f(-0.5, -0.5);
-        glVertex2f(-0.5, 0.5);
-        //glVertex2f(0.5, 0.5);
-        glVertex2f(0.5, -0.5);
-    glEnd();
+    drawSquare(1, 1, 1, 1);
+
     glFlush();
+
+}
+
+void drawSquare(float x, float y, float width, float height) {
+
+    float half_width = width / 2;
+    float half_height = height / 2;
+
+    glBegin(GL_POLYGON);
+        glVertex2f(x - half_width, y - half_height);
+        glVertex2f(x - half_width, y + half_height);
+        glVertex2f(x + half_width, y + half_height);
+        glVertex2f(x + half_width, y - half_height);
+    glEnd();
 
 }
 
