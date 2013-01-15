@@ -12,8 +12,8 @@ void render() {
 
 int main(int argc, char** argv) {
 
-    glutInit(&argc, argv);
-    glutInitDisplayMode(GLUT_SINGLE);
+    //glutInit(&argc, argv);
+    //glutInitDisplayMode(GLUT_SINGLE);
 
     return 0;
 }

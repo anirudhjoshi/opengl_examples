@@ -1,11 +1,12 @@
 CC	= g++
-CFLAGS	= -c -std=c++98 -Wall -W -pedantic -Wextra -Winit-self \
+CFLAGS	= -std=c++98 -Wall -W -pedantic -Wextra -Winit-self \
 		  -Wold-style-cast -Woverloaded-virtual -Wuninitialized \
 		  -Wmissing-declarations -ansi
-LDFLAGS = -lGL -lGLU -lglut 
+LDFLAGS = -lGL -lGLU -lglut -lm 
 
 first: first.cpp
-	$(CC) $(LDFLAGS) $(CFLAGS) first.cpp -o first
+	$(CC) -o first first.cpp $(LDFLAGS) $(CFLAGS) 
+	chmod +x first
 
 clean:
 	rm -rf *o first
