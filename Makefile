@@ -7,6 +7,8 @@ LDFLAGS = -lGL -lGLU -lglut -lm
 first: first.cpp
 	$(CC) -o first first.cpp $(LDFLAGS) $(CFLAGS) 
 	chmod +x first
+	./check.sh
+	./first
 
 clean:
 	rm -rf *o first
