@@ -5,6 +5,6 @@ just some glut based c++ opengl examples
 
 Type in:
 
-    Make EXAMPLE
+    make EXAMPLE
 
 In the source directory to build and execute the example.
