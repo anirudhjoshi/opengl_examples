@@ -1,3 +1,5 @@
 #!/bin/sh
 
-cppcheck -v --enable=style *.cpp
+SRC="../src/"
+
+cppcheck -v --enable=style $SRC$1
